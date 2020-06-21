@@ -4,4 +4,4 @@
  * @version 1.0
  * @since 2020/6/19 16:16
  */
-package com.jxin.study.compiler.demo;
+package com.jxin.study.demo.compiler;
