@@ -1,5 +1,7 @@
 package com.jxin.study.demo.language.script.ast;
 
+import java.util.List;
+
 /**
  *
  * token流 读取器
@@ -7,20 +9,23 @@ package com.jxin.study.demo.language.script.ast;
  * @version 1.0
  * @since 2020/6/21 11:40 下午
  */
-public interface TokenReader {
+public interface ITokenReader {
+    static ITokenReader of(List<IToken> tokens){
+        return SimpleTokenReader.of(tokens);
+    }
     /**
      * 返回Token流中下一个Token，并从流中取出。 如果流已经为空，返回null;
      * @return token
      * @author Jxin
      */
-    Token read();
+    IToken read();
 
     /**
      * 返回Token流中下一个Token，但不从流中取出。 如果流已经为空，返回null;
      * @return token
      * @author Jxin
      */
-    Token peek();
+    IToken peek();
 
     /**
      * Token流回退一步。回退到read前的状态
@@ -41,4 +46,8 @@ public interface TokenReader {
      * @author Jxin
      */
     void setOffset(int offset);
+    /**
+     * 打印Token流的所有token
+     */
+    void dump();
 }

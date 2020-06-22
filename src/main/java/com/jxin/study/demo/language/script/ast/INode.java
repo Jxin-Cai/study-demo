@@ -1,5 +1,7 @@
 package com.jxin.study.demo.language.script.ast;
 
+import java.util.List;
+
 /**
  *
  * AST的节点。
@@ -8,7 +10,7 @@ package com.jxin.study.demo.language.script.ast;
  * @version 1.0
  * @since 2020/6/21 11:16 下午
  */
-public interface Node {
+public interface INode {
 
     /**
      * AST类型
@@ -23,15 +25,15 @@ public interface Node {
      */
     String textVal();
     /**
-     * 获取子节点数组
+     * 获取子节点列表
      * @return 子节点arr
      */
-    Node[] childrens();
+    List<INode> childrens();
     /**
      * 父节点
      * @return 获取父节点
      */
-    Node parent();
+    INode parent();
 
 
 }
