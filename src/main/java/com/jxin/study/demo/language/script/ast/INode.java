@@ -11,7 +11,9 @@ import java.util.List;
  * @since 2020/6/21 11:16 下午
  */
 public interface INode {
-
+    static INode of(NodeTypeEnum type, String textVal, INode parent, List<INode> childrenList){
+        return SimpleNode.of(type, textVal, parent, childrenList);
+    }
     /**
      * AST类型
      * @return AST节点类型

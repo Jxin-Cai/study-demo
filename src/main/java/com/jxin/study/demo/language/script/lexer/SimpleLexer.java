@@ -36,7 +36,7 @@ public class SimpleLexer implements ILexer{
     /**保存解析出来的Token 的容器*/
     private List<IToken> tokenList;
 
-    public static SimpleLexer instance(){
+    static SimpleLexer instance(){
         return new SimpleLexer();
     }
     @Override

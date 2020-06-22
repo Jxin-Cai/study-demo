@@ -26,7 +26,7 @@ public class SimpleTokenReader implements ITokenReader {
      */
     private int offset;
     private static final String DUMP_TMP = "{}\t\t{}";
-    public static SimpleTokenReader of(List<IToken> tokenList){
+    static SimpleTokenReader of(List<IToken> tokenList){
         return new SimpleTokenReader(tokenList.toArray(new IToken[0]), 0);
     }
 

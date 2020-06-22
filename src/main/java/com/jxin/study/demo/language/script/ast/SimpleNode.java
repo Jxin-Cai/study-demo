@@ -22,7 +22,7 @@ public class SimpleNode implements INode {
     private INode parent;
     /**子节点数组*/
     private List<INode> childrenList;
-    public INode of(NodeTypeEnum type, String textVal, INode parent, List<INode> childrenList){
+    static INode of(NodeTypeEnum type, String textVal, INode parent, List<INode> childrenList){
         return new SimpleNode(type, textVal, parent, childrenList);
     }
     @Override

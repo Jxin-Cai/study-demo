@@ -23,7 +23,7 @@ public class SimpleToken implements IToken {
      * @param  textVal 文本值对象
      * @return token
      */
-    public static IToken of(TokenTypeEnum type, String textVal){
+    static IToken of(TokenTypeEnum type, String textVal){
         return new SimpleToken(type, textVal);
     }
     @Override
