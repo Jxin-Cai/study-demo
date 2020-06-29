@@ -1,8 +1,10 @@
 package com.jxin.study.demo.language.script.ast;
 
+import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -22,6 +24,9 @@ public class SimpleNode implements INode {
     private INode parent;
     /**子节点数组*/
     private List<INode> childrenList;
+    static INode of(NodeTypeEnum type, String textVal){
+        return new SimpleNode(type, textVal, null, Lists.newArrayList());
+    }
     static INode of(NodeTypeEnum type, String textVal, INode parent, List<INode> childrenList){
         return new SimpleNode(type, textVal, parent, childrenList);
     }
@@ -37,11 +42,21 @@ public class SimpleNode implements INode {
 
     @Override
     public List<INode> childrens() {
-        return childrenList;
+        return Collections.unmodifiableList(childrenList);
     }
 
     @Override
     public INode parent() {
         return parent;
+    }
+
+    @Override
+    public void setParent(INode parent) {
+        this.parent = parent;
+    }
+
+    @Override
+    public void addChild(INode childNode) {
+        childrenList.add(childNode);
     }
 }

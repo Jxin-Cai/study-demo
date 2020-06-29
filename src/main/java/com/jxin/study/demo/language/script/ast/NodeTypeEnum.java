@@ -18,13 +18,18 @@ public enum NodeTypeEnum {
     /**赋值语句*/
     ASSIGNMENT_STMT,
 
-    /**乘法表达式*/
-    MUL,
-    /**加法表达式*/
-    ADD,
+    /**一级表达式（+, -）*/
+    LEVEL_ONE_STMT,
+    /**二级表达式（*, /）*/
+    LEVEL_TWO_STMT,
+
 
     /**标识符*/
     ID,
     /**整型字面量*/
-    INT_VALUE
+    INT_VALUE,
+    /**浮点数字面量*/
+    FLOAT_VALUE,
+    /**字符串字面量*/
+    STR_VALUE
 }

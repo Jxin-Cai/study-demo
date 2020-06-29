@@ -11,6 +11,9 @@ import java.util.List;
  * @since 2020/6/21 11:16 下午
  */
 public interface INode {
+    static INode of(NodeTypeEnum type, String textVal){
+        return SimpleNode.of(type, textVal);
+    }
     static INode of(NodeTypeEnum type, String textVal, INode parent, List<INode> childrenList){
         return SimpleNode.of(type, textVal, parent, childrenList);
     }
@@ -19,7 +22,6 @@ public interface INode {
      * @return AST节点类型
      */
     NodeTypeEnum type();
-
     /**
      * 获取文本值
      *
@@ -37,5 +39,15 @@ public interface INode {
      */
     INode parent();
 
+    /**
+     * 设置父节点
+     * @param parentNode 子节点
+     */
+    void setParent(INode parentNode);
+    /**
+     * 添加子节点
+     * @param childNode 子节点
+     */
+    void addChild(INode childNode);
 
 }

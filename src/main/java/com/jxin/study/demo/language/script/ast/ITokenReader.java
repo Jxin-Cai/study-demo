@@ -18,7 +18,7 @@ public interface ITokenReader {
      * @return token
      * @author Jxin
      */
-    IToken read();
+    IToken next();
 
     /**
      * 返回Token流中下一个Token，但不从流中取出。 如果流已经为空，返回null;

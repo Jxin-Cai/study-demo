@@ -31,7 +31,7 @@ public class SimpleTokenReader implements ITokenReader {
     }
 
     @Override
-    public IToken read() {
+    public IToken next() {
         if (offset < tokens.length) {
             return tokens[offset++];
         }
