@@ -1,12 +1,7 @@
 package com.jxin.study.demo.language.script.lexer;
 
-import com.google.common.collect.Lists;
 import com.jxin.study.demo.language.script.ast.ITokenReader;
 import org.junit.Test;
-
-import java.util.ArrayList;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Jxin
