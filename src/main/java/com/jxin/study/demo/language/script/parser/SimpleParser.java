@@ -12,9 +12,9 @@ import lombok.extern.slf4j.Slf4j;
  */
 @NoArgsConstructor
 @Slf4j
-public class SimPleParser implements IParser {
-    static SimPleParser instance(){
-        return new SimPleParser();
+public class SimpleParser implements IParser {
+    static SimpleParser instance(){
+        return new SimpleParser();
     }
     @Override
     public INode parse(ITokenReader tokenReader) {

@@ -11,7 +11,7 @@ import com.jxin.study.demo.language.script.ast.ITokenReader;
  */
 public interface IParser {
     static IParser instance(){
-        return SimPleParser.instance();
+        return SimpleParser.instance();
     }
 
     /**
